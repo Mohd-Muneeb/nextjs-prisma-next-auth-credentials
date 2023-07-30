@@ -29,7 +29,7 @@ async function handleGET(userId, res) {
   res.json(user);
 }
 
-// GET /api/user/:id
+// POST /api/user/:id
 async function handlePOST(userId, res, req) {
   const user = await prisma.user.update({
     where: { id: Number(userId) },
